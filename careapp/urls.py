@@ -10,4 +10,13 @@ urlpatterns = [
 
      path('starter/', views.starter, name='starter'),
 
+     path('about/', views.about, name='about'),
+
+      path('services/', views.services, name='services'),
+
+      path('appointment/', views.Appoint, name='appointment'),
+
+      path('department/', views.Depart, name='department'),
+
+
 ]
