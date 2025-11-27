@@ -18,5 +18,8 @@ urlpatterns = [
 
       path('department/', views.Depart, name='department'),
 
+      path('show/', views.show, name='show'),
+
+
 
 ]

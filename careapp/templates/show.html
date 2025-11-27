@@ -1,0 +1,45 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{%block title%} Booked appointments {%endblock%}
+
+{% block content%}
+
+
+ <h1 class ='text-center'> List of booked Appoinment</h1>
+<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium assumenda at autem beatae consequatur culpa delectus deleniti doloremque ea explicabo harum labore magni, maiores obcaecati, qui ratione tempora voluptate?</span></p>
+
+<table class="table table-bordered table-striped table-dark table-hover">
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone number</th>
+        <th>Date & Time</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Message</th>
+        <th>Action</th>
+    </tr>
+
+    {% for appointment in all %}
+    <tr>
+        <td>{{ appointment.name}}</td>
+        <td>{{ appointment.email}}</td>
+        <td>{{ appointment.phone}}</td>
+        <td>{{ appointment.datetime}}</td>
+        <td>{{ appointment.department}}</td>
+        <td>{{ appointment.doctor}}</td>
+        <td>{{ appointment.message}}</td>
+        <td>
+            <a href="" class="btn btn-outline-secondary">Edit</a>
+            <a href="" class="btn btn-outline-danger">Delete</a>
+            <a href="" class="btn btn-outline-success">Pay</a>
+        </td>
+    </tr>
+    {%endfor%}
+
+</table>
+
+{%endblock%}
